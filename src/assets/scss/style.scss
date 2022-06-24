@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import "vars.scss";
+@import "mixins.scss";
+
+body {
+  font-family: "Roboto", sans-serif, Arial;
+  font-size: 14px;
+  margin: 0;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+
+  @include breakpoint($tablet-bp) {
+    &.show-sidebar {
+      overflow: hidden;
+    }
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Blocks */
+
+@import "input.scss";
+@import "button.scss";
+@import "link.scss";
+@import "navigation.scss";
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  height: 80px;
+  align-items: center;
+  padding: 8px 8px 0;
+
+  //   @include breakpoint($tablet-bp) {
+  //     display: none;
+  //   }
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 95px;
+}
+
+.location {
+  display: inline-grid;
+  .location__description {
+    font-size: 12px;
+    color: #828282;
+  }
+  .location__title {
+    padding-left: 20px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      background-image: url(../images/svg/map-pin.svg);
+    }
+  }
+}
+
+.working-hours {
+  display: inline-grid;
+  font-size: 12px;
+  color: #828282;
+}
+
+.social {
+  display: flex;
+  position: relative;
+  width: 92px;
+
+  .social__icon {
+    &::before {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &.icon__fb::before {
+      top: 0;
+      left: 0;
+      background-image: url(../images/svg/fb.svg);
+    }
+
+    &.icon__ig::before {
+      top: 0;
+      left: 34px;
+      background-image: url(../images/svg/ig.svg);
+    }
+
+    &.icon__vk::before {
+      top: 0;
+      left: 68px;
+      background-image: url(../images/svg/vk.svg);
+    }
+  }
+}
+
+.contact {
+  display: inline-grid;
+
+  .contact__city {
+    font-size: 12px;
+    color: #828282;
+  }
+  .contact__phone {
+    color: #25282b;
+    font-size: 14px;
+  }
+}
