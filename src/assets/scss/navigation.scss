@@ -5,6 +5,7 @@
   align-items: center;
   display: flex;
   padding: 0 8px;
+  margin-bottom: 32px;
 }
 
 .navigation__wrapper {
@@ -48,4 +49,28 @@
     display: flex;
     align-items: center;
   }
+}
+
+.breadcrumb ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  color: #828282;
+
+  li {
+    margin: 0 8px 0 0;
+    a{
+        color: #828282;
+        text-decoration: none;
+    }
+  }
+}
+
+.breadcrumb li::before {
+  content: ">";
+  padding-right: 8px;
+}
+
+.breadcrumb li:first-child::before {
+  content: "";
 }

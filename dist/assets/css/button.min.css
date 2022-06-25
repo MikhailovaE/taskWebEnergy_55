@@ -1,1 +1,23 @@
-.btn{padding:16px 20px;background:#eb4747;color:#fff;border:none}.btn-menu{padding-left:54px;position:relative}.btn-menu:before{content:"";position:absolute;background-repeat:no-repeat;background-size:contain;width:24px;height:24px;left:20px;top:50%;transform:translateY(-50%);background-image:url(../images/svg/menu.svg)}
+.btn {
+  padding: 16px 20px;
+  background: #eb4747;
+  color: #fff;
+  border: none;
+}
+
+.btn-menu {
+  padding-left: 54px;
+  position: relative;
+}
+.btn-menu::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url(../images/svg/menu.svg);
+}

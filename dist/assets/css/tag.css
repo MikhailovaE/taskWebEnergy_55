@@ -1,0 +1,35 @@
+.tags {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags .tag__item {
+    border: 1px solid #cacccf;
+    padding: 8.5px 8px;
+    background-color: #f9f9fa;
+    border-radius: 2px;
+    color: #52575c;
+}
+
+.tags .tag__item:hover {
+    color: #e93c3c;
+    border-color: #e93c3c;
+    cursor: pointer;
+}
+
+.tags .tag__item:focus {
+    outline: 1px solid #52575c;
+}
+
+.tags .tag__item:active, .tags .tag__item.active {
+    color: #ffffff;
+    background-color: #e93c3c;
+    border-color: #e93c3c;
+}
+
+#more {
+    display: none;
+}
