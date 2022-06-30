@@ -30,6 +30,6 @@
     border-color: #e93c3c;
 }
 
-#more {
+.tags .tag__item.tag__item-hide {
     display: none;
 }

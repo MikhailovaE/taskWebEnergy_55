@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {{> head }}
 </head>
+
 <body>
 
     {{> header }}
@@ -11,10 +13,15 @@
 
     {{> tag-list}}
 
-    {{> body }}
+    <div class="container main">
+        {{> sidebar }}
+        {{> body }}
+    </div>
 
     {{> footer }}
 
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/price.js"></script>
 </body>
+
 </html>

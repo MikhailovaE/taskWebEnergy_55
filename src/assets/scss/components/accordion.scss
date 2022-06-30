@@ -2,12 +2,18 @@
   min-width: 256px;
   max-width: 268px;
   background-color: #e8e8e8;
+  padding: 16px;
+}
+
+.sidebar__footer {
+    display: flex;
+    flex-direction: column;
 }
 
 .accordion {
   cursor: pointer;
-  padding: 16px;
-  width: 100%;
+  padding: 16px 0;
+    width: 100%;
   border: none;
   text-align: left;
   outline: none;
@@ -46,7 +52,6 @@
 }
 
 .panel {
-  padding: 0 18px;
   color: #212121;
   background-color: #e8e8e8;
   max-height: 0;

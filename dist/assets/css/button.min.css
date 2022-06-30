@@ -1,13 +1,13 @@
 .btn {
   padding: 16px 20px;
-  background: #eb4747;
-  color: #fff;
   border: none;
 }
 
 .btn-menu {
   padding-left: 54px;
   position: relative;
+  background: #eb4747;
+  color: #fff;
 }
 .btn-menu::before {
   content: "";
@@ -20,4 +20,61 @@
   top: 50%;
   transform: translateY(-50%);
   background-image: url(../images/svg/menu.svg);
+}
+
+.btn-primary {
+  border: 1px solid #a0a4a8;
+  background: #fff;
+  color: #52575c;
+  padding: 10px 36px;
+}
+.btn-primary:hover {
+  background: #eb4747;
+  color: #fff;
+}
+.btn-primary:active, .btn-primary:focus {
+  border-color: #eb4747;
+}
+
+.btn-like {
+  border: 1px solid #a0a4a8;
+  background: #fff;
+  color: #52575c;
+  position: relative;
+  padding: 6px 15px;
+}
+.btn-like::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/svg/like.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.btn-like::before svg path {
+  stroke: #52575c;
+}
+.btn-like:hover::before svg path {
+  stroke: #eb4747;
+}
+.btn-like:active::before svg path, .btn-like:focus::before svg path {
+  stroke: #eb4747;
+}
+
+.btn-secondary {
+  border: 1px solid #eb4747;
+  background: #fff;
+  color: #eb4747;
+}
+.btn-secondary.btn-secondary-clear {
+  border: none;
+  background: transparent;
+}
+.btn-secondary:hover {
+  background: #eb4747;
+  color: #fff;
+}
+.btn-secondary:active, .btn-secondary:focus {
+  border-color: #eb4747;
 }

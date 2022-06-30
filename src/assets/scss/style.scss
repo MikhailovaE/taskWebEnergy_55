@@ -31,6 +31,14 @@ body {
 @import "link.scss";
 @import "navigation.scss";
 @import "tag.scss";
+@import "components/accordion.scss";
+@import "components/price.scss";
+@import "components/checkbox.scss";
+@import "components/card.scss";
+
+.main {
+    display: flex;
+}
 
 .header {
   display: flex;
@@ -44,10 +52,15 @@ body {
   //   }
 }
 
+.footer {
+    display: flex;
+}
+
 .container {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .logo {
