@@ -2,18 +2,22 @@
 layout: default
 title: BrainsCloud | Home
 ---
+<div class="card-grid">
+    <div class="card-list">
+        {{> card }}
+        {{> card-1 }}
+        {{> card-2 }}
+        {{> card-1 }}
+        {{> card-2 }}
+        {{> card-3 }}
+        {{> card-1 }}
+        {{> card-2 }}
+        {{> card-3 }}
+        {{> card-1 }}
+        {{> card-2 }}
+        {{> card-3 }}
+    </div>
+    <button class="btn btn-primary btn-fluidWidth">Показать еще</button>
 
-<div style="display: flex; flex-wrap:wrap">
-    {{> card }}
-    {{> card-1 }}
-    {{> card-2 }}
-    {{> card-1 }}
-    {{> card-2 }}
-    {{> card-3 }}
-    {{> card-1 }}
-    {{> card-2 }}
-    {{> card-3 }}
-    {{> card-1 }}
-    {{> card-2 }}
-    {{> card-3 }}
+    {{> pagination }}
 </div>
