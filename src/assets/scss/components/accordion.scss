@@ -15,6 +15,12 @@
       overflow: auto;
       transition: transform 0.2s linear;
       z-index: 100;
+      background-color: #fff;
+    }
+
+    .accordion,
+    .panel {
+      background-color: #fff;
     }
   }
 }

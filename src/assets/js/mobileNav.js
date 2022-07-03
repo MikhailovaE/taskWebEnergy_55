@@ -1,6 +1,10 @@
-const windowInnerHeight = window.innerHeight;
-const burger = document.getElementById("sidebarToggle");
+const filter = document.getElementById("filter-menu");
 const sidebar = document.getElementById("sidebar");
+const menu = document.getElementById("burger-menu");
+const navbar = document.getElementById("navbar");
+const header = document.getElementById("header");
+const mwNavbar = document.getElementById("mw-navbar");
+const mwHeader = document.getElementById("mw-header");
 const body = document.body;
 
 window.addEventListener("resize", AutoScale);
@@ -9,21 +13,25 @@ AutoScale();
 
 function AutoScale() {
   let windowInnerWidth = window.innerWidth;
-  const navbar = document.getElementById("navbar");
-  const header = document.getElementById("header");
-  const mwNavbar = document.getElementById("mw-navbar");
-  const mwHeader = document.getElementById("mw-header");
 
   if (windowInnerWidth < 1024) {
-    body.classList.add("mobile-view")
+    body.classList.add("mobile-view");
     navbar.classList.add("hidden");
     header.classList.add("hidden");
     mwNavbar.classList.remove("hidden");
     mwHeader.classList.remove("hidden");
+
+    filter.addEventListener("click", (event) => {
+      if (body.classList.contains("show-sidebar")) {
+        closeSidebar();
+      } else {
+        showSidebar();
+      }
+    });
   }
 
   if (windowInnerWidth > 1024) {
-    body.classList.remove("mobile-view")
+    body.classList.remove("mobile-view");
     navbar.classList.remove("hidden");
     header.classList.remove("hidden");
     mwNavbar.classList.add("hidden");
@@ -31,26 +39,23 @@ function AutoScale() {
   }
 }
 
-burger.addEventListener("click", (event) => {
-  if (body.classList.contains("show-sidebar")) {
-    closeSidebar();
-  } else {
-    showSidebar();
-  }
-});
-
 function showSidebar() {
   let mask = document.createElement("div");
   mask.addEventListener("click", closeSidebar);
 
   body.classList.add("show-sidebar");
 
-  burger.classList.add("open");
+  filter.classList.add("open");
+  menu.classList.add("open");
+
   sidebar.classList.add("opened");
 }
 
 function closeSidebar() {
   body.classList.remove("show-sidebar");
-  burger.classList.remove("open");
+
+  filter.classList.remove("open");
+  menu.classList.remove("open");
+
   sidebar.classList.remove("opened");
 }

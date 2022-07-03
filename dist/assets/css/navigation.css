@@ -10,6 +10,10 @@
     margin-bottom: 50px;
 }
 
+.navigation#mw-navbar {
+    background: none;
+}
+
 .navigation__wrapper {
     display: -ms-flexbox;
     display: flex;
@@ -79,6 +83,10 @@
 
 .navigation__actions .action.link::before {
     content: none;
+}
+
+.header .navigation__actions .action::before {
+    top: -4px;
 }
 
 .breadcrumb {

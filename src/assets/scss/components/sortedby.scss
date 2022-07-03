@@ -1,5 +1,6 @@
 .select-container {
   margin-bottom: 20px;
+  display: flex;
 
   .select {
     display: block;
@@ -8,5 +9,22 @@
     padding: 5px 10px;
     font-size: 14px;
     color: #52575c;
+  }
+  .filter {
+    display: none;
+  }
+}
+
+.mobile-view {
+  .select-container {
+    display: flex;
+    justify-content: space-between;
+
+    .select {
+      margin-left: 0;
+    }
+    .filter {
+        display: block;
+    }
   }
 }
