@@ -6,6 +6,10 @@
   display: flex;
   padding: 0 8px;
   margin-bottom: 50px;
+
+  &#mw-navbar {
+    background: none;
+  }
 }
 
 .navigation__wrapper {
@@ -71,6 +75,10 @@
       }
     }
   }
+}
+
+.header .navigation__actions .action::before {
+  top: -4px;
 }
 
 .breadcrumb {

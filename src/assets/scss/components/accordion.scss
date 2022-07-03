@@ -1,3 +1,29 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.mobile-view {
+  .sidebar {
+    display: none;
+
+    @include breakpoint($tablet-bp) {
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      display: none;
+      flex-direction: column;
+      height: fit-content;
+      overflow: auto;
+      transition: transform 0.2s linear;
+      z-index: 100;
+    }
+  }
+}
+
+.show-sidebar .sidebar {
+  transform: translateX(0);
+  display: flex;
+}
+
 .sidebar {
   min-width: 256px;
   max-width: 268px;
@@ -29,6 +55,7 @@
   + .panel {
     padding-top: 4px;
     .item-content {
+      padding-left: 2px;
       padding-bottom: 20px;
       border-bottom: 1px solid #cacccf;
     }

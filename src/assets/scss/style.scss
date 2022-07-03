@@ -1,3 +1,6 @@
+@import "vars.scss";
+@import "mixins.scss";
+
 body {
   font-family: "Roboto", sans-serif, Arial;
   font-size: 14px;
@@ -6,12 +9,26 @@ body {
   &.no-scroll {
     overflow: hidden;
   }
+
+  @include breakpoint($tablet-bp) {
+    &.show-sidebar {
+      overflow: hidden;
+    }
+  }
 }
 
 *,
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  visibility: visible;
 }
 
 /* Blocks */
@@ -32,6 +49,10 @@ body {
   display: flex;
 }
 
+.mobile-view .main {
+  padding: 0;
+}
+
 .header {
   display: flex;
   justify-content: space-around;
@@ -39,12 +60,36 @@ body {
   align-items: center;
   padding: 8px 8px 0;
 
+  .header__menu {
+    display: flex;
+  }
+}
+
+#mw-header {
+  .header {
+    justify-content: space-between;
+    height: 50px;
+  }
+  .logo {
+    width: 17%;
+
+    img {
+      width: 59px;
+    }
+  }
 }
 
 .footer-navigation {
   width: 100%;
   align-items: center;
   background: #f9f9fa;
+}
+
+.mobile-view .footer {
+  flex-wrap: wrap;
+  .subscription-form {
+    width: auto;
+  }
 }
 
 .footer {
@@ -104,7 +149,7 @@ body {
         top: 50%;
         transform: translateY(-50%);
         background-image: url(../images/svg/vk.svg);
-    }
+      }
     }
     h5 {
       font-size: 14px;

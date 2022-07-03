@@ -23,6 +23,25 @@
   }
 }
 
+#mw-header {
+  .btn-menu {
+    padding-left: 32px;
+    &::before {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &.open {
+        position: fixed;
+        top:0;
+        right: 0;
+        width: 52px;
+        height: 50px;
+        z-index: 100;
+    }
+  }
+}
+
 .btn-primary {
   border: 1px solid #a0a4a8;
   background: #fff;
@@ -41,7 +60,7 @@
 }
 
 .btn-fluidWidth {
-    width: 100%;
+  width: 100%;
 }
 
 .btn-like {
@@ -72,6 +91,24 @@
   &:active::before svg path,
   &:focus::before svg path {
     stroke: #eb4747;
+  }
+}
+
+.btn-arrow {
+  position: relative;
+  padding-left: 30px;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/svg/right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(-180deg);
+    position: absolute;
+    top: 12px;
+    left: 5px;
   }
 }
 
