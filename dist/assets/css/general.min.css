@@ -2,7 +2,7 @@
   display: flex;
 }
 
-.mobile-view .main:has(.opened) {
+.mobile-view .main {
   padding: 0;
 }
 
