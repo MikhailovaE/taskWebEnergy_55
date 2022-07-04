@@ -14,13 +14,13 @@
       height: fit-content;
       overflow: auto;
       transition: transform 0.2s linear;
-      z-index: 100;
-      background-color: #fff;
+     z-index: $z-index-sidebar;
+      background-color: $white;
     }
 
     .accordion,
     .panel {
-      background-color: #fff;
+      background-color: $white;
     }
   }
 }
@@ -33,7 +33,7 @@
 .sidebar {
   min-width: 256px;
   max-width: 268px;
-  background-color: #e8e8e8;
+  background-color: $gray;
   padding: 16px;
   height: fit-content;
 }
@@ -52,7 +52,7 @@
   outline: none;
   font-size: 18px;
   transition: 0.5s;
-  background-color: #e8e8e8;
+  background-color: $gray;
 }
 
 .accordion.active {
@@ -63,7 +63,7 @@
     .item-content {
       padding-left: 2px;
       padding-bottom: 20px;
-      border-bottom: 1px solid #cacccf;
+      border-bottom: 1px solid $border-color;
     }
   }
 }
@@ -87,7 +87,7 @@
 
 .panel {
   color: #212121;
-  background-color: #e8e8e8;
+  background-color: $gray;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;

@@ -1,3 +1,5 @@
+@import "../vars.scss";
+
 .card-grid {
   margin-bottom: 180px;
 }
@@ -6,6 +8,10 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.mobile-view .card-list {
+    justify-content: center;
+  }
 
 .card {
   max-width: 300px;
@@ -23,14 +29,14 @@
   .card__art {
     font-size: 14px;
     line-height: 18px;
-    color: #a0a4a8;
+    color: $primary-bolrder;
     margin-bottom: 8px;
   }
 
   .card__description {
     font-size: 14px;
     line-height: 18px;
-    color: #25282b;
+    color: $dark-muted-text;
     margin: 0 0 14px 0;
   }
 
@@ -41,13 +47,13 @@
     margin-bottom: 20px;
 
     .card__price-higlighted {
-      color: #e93c3c;
+      color: $primary;
     }
   }
 
   .card__footer {
     display: flex;
-    // justify-content: space-between;
+
     .btn-like {
       margin-left: 20px;
     }

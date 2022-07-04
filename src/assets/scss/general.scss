@@ -1,0 +1,222 @@
+@import "vars.scss";
+
+.main {
+    display: flex;
+  }
+  
+  .mobile-view .main:has(.opened) {
+    padding: 0;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+    align-items: center;
+    padding: 8px 8px 0;
+  
+    .header__menu {
+      display: flex;
+    }
+  }
+  
+  #mw-header {
+    .header {
+      justify-content: space-between;
+      height: 50px;
+    }
+    .logo {
+      width: 17%;
+  
+      img {
+        width: 59px;
+      }
+    }
+  }
+  
+  .footer-navigation {
+    width: 100%;
+    align-items: center;
+    background: $light-gray;
+  }
+  
+  .mobile-view .footer {
+      grid-template-columns: none;
+    .subscription-form {
+      width: auto;
+    }
+  
+    .box-1 {
+     grid-column-start: 1;
+     grid-column-end: 2;
+     grid-row-start: 3;
+     grid-row-end: 4;
+    }
+  }
+  
+  .footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding-top: 20px;
+  
+    .navigation__links {
+      align-items: flex-start;
+      flex-direction: column;
+  
+      .nav-link {
+        margin-bottom: 20px;
+        text-align: inherit;
+        text-transform: uppercase;
+      }
+    }
+  
+    .social {
+      margin: 20px 0;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .share-link {
+      padding-left: 30px;
+      width: 100%;
+  
+      a {
+        font-size: 14px;
+        line-height: 16px;
+        color: $light-primary;
+        text-decoration: none;
+      }
+    }
+  
+    .subscription-form {
+      display: flex;
+      flex-direction: column;
+  
+      .subscription-agreement {
+        margin-bottom: 20px;
+        background: $white;
+        border: 1px solid $gray;
+        border-radius: 4px;
+        padding: 12px 30px 12px 12px;
+        position: relative;
+  
+        &::before {
+          content: "";
+          position: absolute;
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 24px;
+          height: 24px;
+          top: 50%;
+          transform: translateY(-50%);
+          background-image: url(../images/svg/vk.svg);
+        }
+      }
+      h5 {
+        font-size: 14px;
+        color: $dark-gray;
+        margin-top: 0;
+      }
+    }
+  
+    .footer__other-info {
+      color: $dark-gray;
+    }
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    width: 95px;
+  }
+  
+  .location {
+    display: inline-grid;
+    .location__description {
+      font-size: 12px;
+      color: $muted-text;
+    }
+    .location__title {
+      padding-left: 20px;
+      position: relative;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 16px;
+        height: 16px;
+        left: 0;
+        background-image: url(../images/svg/map-pin.svg);
+      }
+    }
+  }
+  
+  .working-hours {
+    display: inline-grid;
+    font-size: 12px;
+    color: $muted-text;
+  }
+  
+  .social {
+    display: flex;
+    position: relative;
+    width: 92px;
+    height: 24px;
+  
+    .social__icon {
+      &::before {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 24px;
+        height: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+  
+      &.icon__fb::before {
+        left: 0;
+        background-image: url(../images/svg/fb.svg);
+      }
+  
+      &.icon__ig::before {
+        left: 34px;
+        background-image: url(../images/svg/ig.svg);
+      }
+  
+      &.icon__vk::before {
+        left: 68px;
+        background-image: url(../images/svg/vk.svg);
+      }
+  
+      &.icon__exel::before {
+        left: 0;
+        background-image: url(../images/svg/exel.svg);
+      }
+    }
+  }
+  
+  .contact {
+    display: inline-grid;
+  
+    .contact__city {
+      font-size: 12px;
+      color: $muted-text;
+    }
+    .contact__phone {
+      color: $dark-muted-text;
+      font-size: 14px;
+    }
+    .contact__email {
+      margin-top: 20px;
+    }
+  }
+  

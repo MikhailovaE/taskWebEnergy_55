@@ -1,3 +1,5 @@
+@import "../vars.scss";
+
 .checkbox {
   margin-bottom: 14px;
 
@@ -15,7 +17,7 @@
 .isDisabled {
   .checkbox__input {
     + label {
-      color: #a0a4a8;
+      color: $primary-bolrder;
       &::before {
         background-color: #e9ecef;
       }
@@ -48,28 +50,28 @@
 
 .checkbox__input:not(:disabled):not(:checked) + label:hover {
   cursor: pointer;
-  color: #e93c3c;
+  color: $primary;
   &::before {
-    background-color: #ff6f6f;
+    background-color: $lightest-primary;
     opacity: 0.4;
   }
 }
 
 .checkbox__input:not(:disabled):active + label::before {
-  background-color: #ff6f6f;
-  border-color: #ff6f6f;
+  background-color: $lightest-primary;
+  border-color: $lightest-primary;
 }
 
 .checkbox__input:focus + label::before {
-  outline: 2px solid #e93c3c;
+  outline: 2px solid $primary;
 }
 
 .checkbox__input:focus:not(:checked) + label::before {
-  border-color: #e93c3c;
+  border-color: $primary;
 }
 
 .checkbox__input:checked + label::before {
-  border-color: #e93c3c;
-  background-color: #e93c3c;
+  border-color: $primary;
+  background-color: $primary;
   background-image: url(../images/svg/Check.svg);
 }

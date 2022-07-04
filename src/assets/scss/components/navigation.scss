@@ -1,5 +1,7 @@
+@import "../vars.scss";
+
 .navigation {
-  background: #f2f2f2;
+  background: $lighter;
   height: 48px;
   width: 100%;
   align-items: center;
@@ -28,7 +30,7 @@
     padding: 0 8px;
     align-items: center;
     text-align: center;
-    color: #828282;
+    color: $muted-text;
     text-decoration: none;
 
     &:hover {
@@ -39,7 +41,7 @@
       font-size: 14px;
       font-weight: 500;
       text-transform: uppercase;
-      color: #eb4747;
+      color: $light-primary;
     }
   }
 }
@@ -61,11 +63,11 @@
       width: 14px;
       height: 14px;
       border-radius: 50%;
-      background-color: #eb4747;
+      background-color: $light-primary;
       right: 4px;
       top: 8px;
-      border: 2px solid #f2f2f2;
-      color: #fff;
+      border: 2px solid $lighter;
+      color: $white;
       font-size: 8px;
       padding-left: 3px;
     }
@@ -89,12 +91,12 @@
   display: flex;
   list-style: none;
   padding: 0;
-  color: #828282;
+  color: $muted-text;
 
   li {
     margin: 0 8px 0 0;
     a {
-      color: #828282;
+      color: $muted-text;
       text-decoration: none;
     }
   }

@@ -449,7 +449,13 @@ body.no-scroll {
         transition: transform 0.2s linear;
         transition: transform 0.2s linear, -webkit-transform 0.2s linear;
         z-index: 100;
+        background-color: #fff;
     }
+}
+
+.mobile-view .sidebar .accordion,
+.mobile-view .sidebar .panel {
+    background-color: #fff;
 }
 
 .show-sidebar .sidebar {
@@ -899,19 +905,20 @@ input[type=range]::-ms-thumb {
 }
 
 .spin {
-    display: inline-block;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .spin span {
     display: inline-block;
-    width: 20px;
-    height: 22px;
     text-align: center;
-    padding-top: 2px;
-    background: #ff0;
-    border: 1px solid #aaa;
-    border-radius: 0 4px 4px 0;
     cursor: pointer;
+    width: 34px;
+    height: 34px;
+    background: #e93c3c;
+    border-radius: 4px;
+    padding: 7px;
+    margin-right: 4px;
 }
 
 .spin span:first-child {
@@ -919,8 +926,9 @@ input[type=range]::-ms-thumb {
 }
 
 .spin input {
-    width: 40px;
-    height: 20px;
+    margin-right: 4px;
+    width: 52px;
+    height: 34px;
     text-align: center;
     font-weight: bold;
 }
@@ -960,7 +968,7 @@ input[type=range]::-ms-thumb {
     transition: opacity 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
     transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
     transition: transform 200ms ease-in-out, opacity 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
-    padding: 5rem 3rem 3rem;
+    padding: 47px 16px 16px 16px;
 }
 
 .modal__close {
@@ -970,7 +978,7 @@ input[type=range]::-ms-thumb {
     cursor: pointer;
     opacity: 0.5;
     position: absolute;
-    top: 2rem;
+    top: 3rem;
     right: 2rem;
     transition: opacity 0.2s linear, -webkit-transform 0.2s linear;
     transition: transform 0.2s linear, opacity 0.2s linear;
@@ -983,9 +991,35 @@ input[type=range]::-ms-thumb {
     opacity: 1;
 }
 
-.modal__footer {
+.modal__title {
+    font-size: 20px;
+    color: #25282b;
+    margin-top: 0;
+}
+
+.modal__body {
     text-align: center;
     margin-top: 40px;
+}
+
+table {
+    margin-bottom: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:first-child th {
+    padding-bottom: 30px;
+}
+
+tr:first-child th:first-child {
+    text-align: left;
+}
+
+td {
+    padding: 10px;
 }
 
 .main {

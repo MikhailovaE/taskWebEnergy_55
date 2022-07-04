@@ -1,15 +1,22 @@
-$primary:   #202020;
-$secondary: #121212;
 $white:     #fff;
 $black:     #000;
-$red:       #ED3024;
-$blue:      #3137C9;
+
+$primary:   #e93c3c;
+$light-primary: #eb4747;
+$lightest-primary: #ff6f6f;
+$primary-bolrder: #a0a4a8;
+
+$lighter: #f2f2f2;
+$light-gray: #f9f9fa;
+$gray: #e8e8e8;
+$dark-gray: #52575c;
+
+$muted-text: #828282;
+$dark-muted-text:#25282b;
+$border-color: #cacccf;
 
 $z-index-sidebar: 1000;
-$z-index-header:  1000;
 $z-index-modal:   1010;
-
-$sidebar-width: 300px;
 
 $laptop-bp: 1200px;
 $tablet-bp: 991px;

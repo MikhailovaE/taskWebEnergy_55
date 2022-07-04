@@ -1,5 +1,7 @@
+@import "../vars.scss";
+
 .link {
-  color: #e93c3c;
+  color: $primary;
   font-size: 14px;
   cursor: pointer;
   text-decoration: none;

@@ -1,3 +1,5 @@
+@import "../vars.scss";
+
 .tag-list {
   margin-top: 32px;
   margin-bottom: 10px;
@@ -9,26 +11,26 @@
   gap: 8px;
 
   .tag__item {
-    border: 1px solid #cacccf;
+    border: 1px solid $border-color;
     padding: 8.5px 8px;
-    background-color: #f9f9fa;
+    background-color: $light-gray;
     border-radius: 2px;
-    color: #52575c;
+    color: $dark-gray;
 
     &:hover {
-      color: #e93c3c;
-      border-color: #e93c3c;
+      color: $primary;
+      border-color: $primary;
       cursor: pointer;
     }
     &:focus {
-      outline: 1px solid #52575c;
+      outline: 1px solid $dark-gray;
     }
 
     &:active,
     &.active {
-      color: #ffffff;
-      background-color: #e93c3c;
-      border-color: #e93c3c;
+      color: $white;
+      background-color: $primary;
+      border-color: $primary;
     }
 
     &.tag__item-hide {
