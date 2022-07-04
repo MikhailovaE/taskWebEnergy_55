@@ -2,6 +2,7 @@ const filter = document.getElementById("filter-menu");
 const sidebar = document.getElementById("sidebar");
 const menu = document.getElementById("burger-menu");
 const navbar = document.getElementById("navbar");
+const breadcrumb = document.getElementById("breadcrumb")
 const header = document.getElementById("header");
 const mwNavbar = document.getElementById("mw-navbar");
 const mwHeader = document.getElementById("mw-header");
@@ -17,6 +18,7 @@ function AutoScale() {
   if (windowInnerWidth < 1024) {
     body.classList.add("mobile-view");
     navbar.classList.add("hidden");
+    breadcrumb.classList.add("hidden");
     header.classList.add("hidden");
     mwNavbar.classList.remove("hidden");
     mwHeader.classList.remove("hidden");
@@ -34,6 +36,7 @@ function AutoScale() {
     body.classList.remove("mobile-view");
     navbar.classList.remove("hidden");
     header.classList.remove("hidden");
+    breadcrumb.classList.remove("hidden");
     mwNavbar.classList.add("hidden");
     mwHeader.classList.add("hidden");
   }

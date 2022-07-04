@@ -1,1 +1,87 @@
-!function(){let e=document.getElementsByClassName("accordion");for(let t=0;t<e.length;t++)e[t].addEventListener("click",(function(){this.classList.toggle("active");var e=this.nextElementSibling;e.style.maxHeight?e.style.maxHeight=null:e.style.maxHeight=e.scrollHeight+"px"}))}(),function(){const e=document.getElementById("show-more"),t=document.getElementById("show-less"),n=document.getElementsByClassName("tag__item-hide"),s=n.length;e.addEventListener("click",(l=>{e.style.display="none",t.style.display="block";for(var a=0;a<=s;a++)n[a].style.display="block"})),t.addEventListener("click",(l=>{e.style.display="block",t.style.display="none";for(var a=0;a<=s;a++)n[a].style.display="none"}))}(),function(){const e=document.getElementById("filter-menu"),t=document.getElementById("sidebar"),n=document.getElementById("burger-menu"),s=document.getElementById("navbar"),l=document.getElementById("header"),a=document.getElementById("mw-navbar"),o=document.getElementById("mw-header"),c=document.body;function d(){let d=window.innerWidth;d<1024&&(c.classList.add("mobile-view"),s.classList.add("hidden"),l.classList.add("hidden"),a.classList.remove("hidden"),o.classList.remove("hidden"),e.addEventListener("click",(s=>{c.classList.contains("show-sidebar")?i():(document.createElement("div").addEventListener("click",i),c.classList.add("show-sidebar"),e.classList.add("open"),n.classList.add("open"),t.classList.add("opened"))}))),d>1024&&(c.classList.remove("mobile-view"),s.classList.remove("hidden"),l.classList.remove("hidden"),a.classList.add("hidden"),o.classList.add("hidden"))}function i(){c.classList.remove("show-sidebar"),e.classList.remove("open"),n.classList.remove("open"),t.classList.remove("opened")}window.addEventListener("resize",d),d()}(),function(){const e=document.querySelectorAll("[data-modal]"),t=document.body,n=document.querySelectorAll(".modal__close"),s=document.querySelectorAll(".modal");function l(e){e.querySelector(".modal__content").removeAttribute("style"),setTimeout((()=>{e.classList.remove("show"),t.classList.remove("no-scroll")}),200)}e.forEach((e=>{e.addEventListener("click",(e=>{let n=e.currentTarget.getAttribute("data-modal"),s=document.getElementById(n),l=s.querySelector(".modal__content");l.addEventListener("click",(e=>{e.stopPropagation()})),s.classList.add("show"),t.classList.add("no-scroll"),setTimeout((()=>{l.style.transform="none",l.style.opacity="1"}),1)}))})),n.forEach((e=>{e.addEventListener("click",(e=>{l(e.currentTarget.closest(".modal"))}))})),s.forEach((e=>{e.addEventListener("click",(e=>{l(e.currentTarget)}))}))}(),function(){var e=document.querySelector(".price-slider");if(e){var t=e.querySelectorAll("input[type=range]"),n=e.querySelectorAll("input[type=number]");t.forEach((function(e){e.oninput=function(){var e=parseFloat(t[0].value),s=parseFloat(t[1].value);e>s&&([e,s]=[s,e]),n[0].value=e,n[1].value=s}})),n.forEach((function(e){e.oninput=function(){var e=parseFloat(n[0].value),s=parseFloat(n[1].value);if(e>s){var l=e;n[0].value=s,n[1].value=l}t[0].value=e,t[1].value=s}}))}}(),function(){for(var e=document.getElementsByClassName("spin"),t=0,n=e.length;t<n;t++){var s=e[t],l=s.getElementsByTagName("span"),a=s.getElementsByTagName("input")[0];a.onchange=function(){a.value=+a.value||0},l[0].onclick=function(){a.value=Math.max(0,a.value-1)},l[1].onclick=function(){a.value-=-1}}}();
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (function() { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/assets/js/accordion.js":
+/*!************************************!*\
+  !*** ./src/assets/js/accordion.js ***!
+  \************************************/
+/***/ (function() {
+
+eval("let accordion = document.getElementsByClassName(\"accordion\");\r\n\r\nfor (let i = 0; i < accordion.length; i++) {\r\n    accordion[i].addEventListener(\"click\", function () {\r\n        this.classList.toggle(\"active\");\r\n        var panel = this.nextElementSibling;\r\n        if (panel.style.maxHeight) {\r\n            panel.style.maxHeight = null;\r\n        } else {\r\n            panel.style.maxHeight = panel.scrollHeight + \"px\";\r\n        }\r\n    });\r\n}\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/accordion.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/app.js":
+/*!******************************!*\
+  !*** ./src/assets/js/app.js ***!
+  \******************************/
+/***/ (function() {
+
+eval("const showMore = document.getElementById(\"show-more\");\r\nconst showLess = document.getElementById(\"show-less\");\r\nconst hideCollection = document.getElementsByClassName(\"tag__item-hide\");\r\n\r\nconst itemsCount = hideCollection.length;\r\n\r\nshowMore.addEventListener(\"click\", (event) => {\r\n  showMore.style.display = 'none';\r\n  showLess.style.display = 'block';\r\n  for (var j = 0; j <= itemsCount; j++) {\r\n    hideCollection[j].style.display = 'block';\r\n  }\r\n});\r\n\r\nshowLess.addEventListener(\"click\", (event) => {\r\n    showMore.style.display = 'block';\r\n    showLess.style.display = 'none';\r\n    for (var j = 0; j <= itemsCount; j++) {\r\n        hideCollection[j].style.display = 'none';\r\n      }\r\n  });\r\n\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/app.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/mobileNav.js":
+/*!************************************!*\
+  !*** ./src/assets/js/mobileNav.js ***!
+  \************************************/
+/***/ (function() {
+
+eval("const filter = document.getElementById(\"filter-menu\");\r\nconst sidebar = document.getElementById(\"sidebar\");\r\nconst menu = document.getElementById(\"burger-menu\");\r\nconst navbar = document.getElementById(\"navbar\");\r\nconst breadcrumb = document.getElementById(\"breadcrumb\")\r\nconst header = document.getElementById(\"header\");\r\nconst mwNavbar = document.getElementById(\"mw-navbar\");\r\nconst mwHeader = document.getElementById(\"mw-header\");\r\nconst body = document.body;\r\n\r\nwindow.addEventListener(\"resize\", AutoScale);\r\n\r\nAutoScale();\r\n\r\nfunction AutoScale() {\r\n  let windowInnerWidth = window.innerWidth;\r\n\r\n  if (windowInnerWidth < 1024) {\r\n    body.classList.add(\"mobile-view\");\r\n    navbar.classList.add(\"hidden\");\r\n    breadcrumb.classList.add(\"hidden\");\r\n    header.classList.add(\"hidden\");\r\n    mwNavbar.classList.remove(\"hidden\");\r\n    mwHeader.classList.remove(\"hidden\");\r\n\r\n    filter.addEventListener(\"click\", (event) => {\r\n      if (body.classList.contains(\"show-sidebar\")) {\r\n        closeSidebar();\r\n      } else {\r\n        showSidebar();\r\n      }\r\n    });\r\n  }\r\n\r\n  if (windowInnerWidth > 1024) {\r\n    body.classList.remove(\"mobile-view\");\r\n    navbar.classList.remove(\"hidden\");\r\n    header.classList.remove(\"hidden\");\r\n    breadcrumb.classList.remove(\"hidden\");\r\n    mwNavbar.classList.add(\"hidden\");\r\n    mwHeader.classList.add(\"hidden\");\r\n  }\r\n}\r\n\r\nfunction showSidebar() {\r\n  let mask = document.createElement(\"div\");\r\n  mask.addEventListener(\"click\", closeSidebar);\r\n\r\n  body.classList.add(\"show-sidebar\");\r\n\r\n  filter.classList.add(\"open\");\r\n  menu.classList.add(\"open\");\r\n\r\n  sidebar.classList.add(\"opened\");\r\n}\r\n\r\nfunction closeSidebar() {\r\n  body.classList.remove(\"show-sidebar\");\r\n\r\n  filter.classList.remove(\"open\");\r\n  menu.classList.remove(\"open\");\r\n\r\n  sidebar.classList.remove(\"opened\");\r\n}\r\n\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/mobileNav.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/modal.js":
+/*!********************************!*\
+  !*** ./src/assets/js/modal.js ***!
+  \********************************/
+/***/ (function() {
+
+eval("const modalBtn = document.querySelectorAll('[data-modal]');\r\nconst body = document.body;\r\nconst modalClose = document.querySelectorAll('.modal__close');\r\nconst modal = document.querySelectorAll('.modal');\r\n\r\n\r\nmodalBtn.forEach(item => {\r\n    item.addEventListener('click', event => {\r\n        let $this = event.currentTarget;\r\n        let modalId = $this.getAttribute('data-modal');\r\n        let modal = document.getElementById(modalId);\r\n        let modalContent = modal.querySelector('.modal__content');\r\n        \r\n        modalContent.addEventListener('click', event => {\r\n            event.stopPropagation();\r\n        });\r\n        \r\n        modal.classList.add('show');\r\n        body.classList.add('no-scroll');\r\n        \r\n        setTimeout(() => {\r\n            modalContent.style.transform = 'none';\r\n            modalContent.style.opacity = '1';\r\n        }, 1);\r\n        \r\n    });\r\n});\r\n\r\n\r\nmodalClose.forEach(item => {\r\n    item.addEventListener('click', event => {\r\n        let currentModal = event.currentTarget.closest('.modal');\r\n        \r\n        closeModal(currentModal);\r\n    });\r\n});\r\n\r\n\r\nmodal.forEach(item => {\r\n    item.addEventListener('click', event => {\r\n        let currentModal = event.currentTarget;\r\n        \r\n        closeModal(currentModal);\r\n    });\r\n});\r\n\r\n\r\nfunction closeModal(currentModal) {\r\n    let modalContent = currentModal.querySelector('.modal__content');\r\n    modalContent.removeAttribute('style');\r\n    \r\n    setTimeout(() => {\r\n        currentModal.classList.remove('show');\r\n        body.classList.remove('no-scroll');\r\n    }, 200);\r\n}\r\n\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/modal.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/price.js":
+/*!********************************!*\
+  !*** ./src/assets/js/price.js ***!
+  \********************************/
+/***/ (function() {
+
+eval("\r\n(function () {\r\n  var parent = document.querySelector(\".price-slider\");\r\n  if (!parent) return;\r\n\r\n  var rangeS = parent.querySelectorAll(\"input[type=range]\"),\r\n    numberS = parent.querySelectorAll(\"input[type=number]\");\r\n\r\n  rangeS.forEach(function (el) {\r\n    el.oninput = function () {\r\n      var slide1 = parseFloat(rangeS[0].value),\r\n        slide2 = parseFloat(rangeS[1].value);\r\n\r\n      if (slide1 > slide2) {\r\n        [slide1, slide2] = [slide2, slide1];\r\n      }\r\n\r\n      numberS[0].value = slide1;\r\n      numberS[1].value = slide2;\r\n    };\r\n  });\r\n\r\n  numberS.forEach(function (el) {\r\n    el.oninput = function () {\r\n      var number1 = parseFloat(numberS[0].value),\r\n        number2 = parseFloat(numberS[1].value);\r\n\r\n      if (number1 > number2) {\r\n        var tmp = number1;\r\n        numberS[0].value = number2;\r\n        numberS[1].value = tmp;\r\n      }\r\n\r\n      rangeS[0].value = number1;\r\n      rangeS[1].value = number2;\r\n    };\r\n  });\r\n})();\r\n\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/price.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/stepper.js":
+/*!**********************************!*\
+  !*** ./src/assets/js/stepper.js ***!
+  \**********************************/
+/***/ (function() {
+
+eval("var spins = document.getElementsByClassName(\"spin\");\r\nfor (var i = 0, len = spins.length; i < len; i++) {\r\n  var spin = spins[i],\r\n    span = spin.getElementsByTagName(\"span\"),\r\n    input = spin.getElementsByTagName(\"input\")[0];\r\n\r\n  input.onchange = function () {\r\n    input.value = +input.value || 0;\r\n  };\r\n  span[0].onclick = function () {\r\n    input.value = Math.max(0, input.value - 1);\r\n  };\r\n  span[1].onclick = function () {\r\n    input.value -= -1;\r\n  };\r\n}\r\n\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/stepper.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	__webpack_modules__["./src/assets/js/accordion.js"]();
+/******/ 	__webpack_modules__["./src/assets/js/app.js"]();
+/******/ 	__webpack_modules__["./src/assets/js/mobileNav.js"]();
+/******/ 	__webpack_modules__["./src/assets/js/modal.js"]();
+/******/ 	__webpack_modules__["./src/assets/js/price.js"]();
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/assets/js/stepper.js"]();
+/******/ 	
+/******/ })()
+;
